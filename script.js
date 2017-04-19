@@ -1,3 +1,4 @@
+// 3//
 function Person (year, cellphone){
 	this.year = year;
 	this.cellphone = cellphone;
@@ -63,3 +64,23 @@ function gotoClass (student, inclass){
 function giveApple (teacher, gift){
  	teacher.appleStatus.push(gift);
 }
+
+// 1//
+function Multiplier() {
+    var lastValue = null;
+    this.getCurrentValue = function() {
+        return lastValue;
+    };
+
+    this.multiply = function() {
+        var a = prompt("Input your desired number");
+        var c = prompt("input your desired number");
+        var b = a * c;
+        
+        lastValue = b;
+        return alert(b);
+    }
+}
+
+var myMultiplier = new Multiplier;
+
