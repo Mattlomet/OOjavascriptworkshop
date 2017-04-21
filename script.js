@@ -90,28 +90,65 @@ console.log(myMultiplier.multiply())
 
 // 2//
 
-function Gallery (){
-	var photo = [];
-	this.addPhoto=addPhoto;
-	this.sendToPage=sendToPage;
+// function Gallery (){
+// 	var photo = [];
+// 	this.addPhoto=addPhoto;
+// 	this.sendToPage=sendToPage;
+// }
+
+// function image (name,fileType){
+// 	this.name=name;
+// 	this.fileType=fileType;
+// }
+
+// function addPhoto (image) {//create image tag
+// 	// var img = "<img src=' ";
+// 	// var end = " ' >";
+// 	// photo.push(img+=image+=end);
+// 	photo.push(image);
+
+// }
+
+// function sendToPage (){
+// 	// var startdiv= "<div class= 'gallery' > "
+// 	// var enddiv= "  </div>"
+// 	// var endresult = (startdiv += photo += enddiv);
+// 	// document.getElementsByClassName("gallery")[0].innerHTML+= endresult;
+// }
+
+function Photo (fileName, location){
+	this.fileName=fileName;
+	this.location=location;
+	this.addToGallery=addToGallery;
+	this.listPhotos=listPhotos;
+	this.locateByIndex=locateByIndex;
 }
 
-function image (name,fileType){
-	this.name=name;
-	this.fileType=fileType;
+var photoHolder = [];
+
+var dolphin = new Photo ("dolphin.jpg", "ocean");
+var whale = new Photo ("whale.jpg", "ocean");
+var monkey = new Photo ("monkey.jpg", "trees");
+var salmon = new Photo ("salmon.jpg", "river");
+var plankton = new Photo ("plankton.jpg", "ocean");
+
+function addToGallery(photo){
+	photoHolder.push(photo)
 }
 
-function addPhoto (image) {//create image tag
-	// var img = "<img src=' ";
-	// var end = " ' >";
-	// photo.push(img+=image+=end);
-	photo.push(image);
-
+function listPhotos(){
+	for (var i = 0; i < photoHolder.length; i++) {
+		console.log(photoHolder[i])
+	}
+}
+function locateByIndex(photo){
+	for (var i = 0; i < photoHolder.length; i++) {
+		return photoHolder[photo];
+	}
 }
 
-function sendToPage (){
-	// var startdiv= "<div class= 'gallery' > "
-	// var enddiv= "  </div>"
-	// var endresult = (startdiv += photo += enddiv);
-	// document.getElementsByClassName("gallery")[0].innerHTML+= endresult;
-}
+
+
+
+
+
