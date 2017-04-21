@@ -65,6 +65,8 @@ function giveApple (teacher, gift){
  	teacher.appleStatus.push(gift);
 }
 
+
+
 // 1//
 function Multiplier() {
     var lastValue = null;
@@ -84,3 +86,32 @@ function Multiplier() {
 
 var myMultiplier = new Multiplier;
 
+console.log(myMultiplier.multiply())
+
+// 2//
+
+function Gallery (){
+	var photo = [];
+	this.addPhoto=addPhoto;
+	this.sendToPage=sendToPage;
+}
+
+function image (name,fileType){
+	this.name=name;
+	this.fileType=fileType;
+}
+
+function addPhoto (image) {//create image tag
+	// var img = "<img src=' ";
+	// var end = " ' >";
+	// photo.push(img+=image+=end);
+	photo.push(image);
+
+}
+
+function sendToPage (){
+	// var startdiv= "<div class= 'gallery' > "
+	// var enddiv= "  </div>"
+	// var endresult = (startdiv += photo += enddiv);
+	// document.getElementsByClassName("gallery")[0].innerHTML+= endresult;
+}
